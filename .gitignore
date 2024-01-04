@@ -1,3 +1,4 @@
 *a.out
 .vscode
 *.user
+include/settings.h
