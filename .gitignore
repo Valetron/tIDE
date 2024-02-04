@@ -2,3 +2,6 @@
 .vscode
 *.user
 include/settings.h
+Find*.cmake
+cmake/conan*
+graph_info.json

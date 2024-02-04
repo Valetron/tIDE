@@ -1,3 +1,5 @@
+cmake_minimum_required(VERSION 3.10)
+
 if("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_BINARY_DIR}")
     message(FATAL_ERROR "Create separate directory for build.")
 endif()
@@ -6,7 +8,6 @@ if(NOT LINUX)
     message(FATAL_ERROR "Only Linux currently supported")
 endif()
 
-cmake_minimum_required(VERSION 3.10)
 project(cIDE VERSION 0.1 DESCRIPTION "Console integrated development environment" HOMEPAGE_URL "" LANGUAGES C)
 
 set(CMAKE_C_STANDARD 99)
