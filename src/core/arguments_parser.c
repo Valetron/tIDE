@@ -2,7 +2,7 @@
 
 #include "arguments_parser.h"
 
-void parse_cli_arguments(const int argc, const char** const argv)
+void parse_cli_arguments(const int argc, const char** argv)
 {
     if (1 == argc)
         return;

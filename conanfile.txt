@@ -1,0 +1,16 @@
+[requires]
+ncurses/6.4
+
+[generators]
+cmake_find_package
+cmake_paths
+
+[options]
+ncurses:with_cxx=False
+#ncurses:with_pcre2=True
+ncurses:with_progs=False
+
+[imports]
+lib, *.so* -> ./conan-imports/bin
+lib, *.a -> ./conan-imports/lib
+
