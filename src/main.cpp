@@ -3,7 +3,7 @@
 
 int main(int argc, char** argv)
 {
-    parse_cli_arguments(argc, argv);
+    // parse_cli_arguments(argc, argv);
 
     return 0;
 }

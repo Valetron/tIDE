@@ -1,22 +1,14 @@
 cmake_minimum_required(VERSION 3.10)
 
-if("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_BINARY_DIR}")
-    message(FATAL_ERROR "Create separate directory for build.")
-endif()
+include(cmake/misc.cmake)
+include(cmake/settings.cmake)
+include(cmake/VJ_FindNcurses.cmake) # FIXME: переделать поиск?
 
-if(NOT LINUX)
-    message(FATAL_ERROR "Only Linux currently supported")
-endif()
-
-project(cIDE VERSION 0.1 DESCRIPTION "Console integrated development environment" HOMEPAGE_URL "" LANGUAGES C)
-
-set(CMAKE_C_STANDARD 99)
-
-find_program(CCACHE_PROGRAM ccache)
-if(CCACHE_PROGRAM)
-    set_property(GLOBAL PROPERTY RULE_LAUNCH_COMPILE ${CCACHE_PROGRAM})
-endif()
-
+project(tide
+        VERSION 0.1
+        DESCRIPTION "Terminal integrated development environment"
+        HOMEPAGE_URL ""
+        LANGUAGES CXX)
 
 set(INCLUDES_DIR "${CMAKE_CURRENT_SOURCE_DIR}/include/")
 include_directories(${INCLUDES_DIR})
